@@ -1,114 +1,35 @@
-
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Akanksha Dental Clinic</title>
-  <meta name="description" content="Welcome to Akanksha Dental Clinic. Explore our dental services and contact our clinic.">
-
-  <style>
-    * { box-sizing: border-box; }
-    body {
-      margin: 0;
-      font-family: Arial, sans-serif;
-      color: #18313b;
-      background: #f5fbfc;
-      line-height: 1.6;
-    }
-    header {
-      background: white;
-      padding: 18px 7%;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      gap: 12px;
-      flex-wrap: wrap;
-      box-shadow: 0 2px 12px #0000000d;
-    }
-    header h2 { margin: 0; color: #087f8c; }
-    nav a { margin-left: 18px; text-decoration: none; color: #18313b; }
-    .hero {
-      padding: 85px 7%;
-      text-align: center;
-      background: linear-gradient(135deg, #dff7f7, #f5fbfc);
-    }
-    .hero h1 { font-size: clamp(32px, 5vw, 52px); line-height: 1.2; }
-    .hero p { max-width: 650px; margin: 20px auto; color: #52656b; }
-    .btn {
-      display: inline-block;
-      padding: 12px 23px;
-      margin: 8px;
-      border-radius: 8px;
-      background: #087f8c;
-      color: white;
-      text-decoration: none;
-    }
-    .btn.secondary { background: white; color: #087f8c; border: 1px solid #087f8c; }
-    section { padding: 48px 7%; text-align: center; }
-    .services {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-      gap: 18px;
-      margin-top: 25px;
-    }
-    .service {
-      background: white;
-      padding: 24px;
-      border-radius: 12px;
-      box-shadow: 0 5px 20px #18313b0b;
-    }
-    footer { padding: 24px; text-align: center; background: #18313b; color: white; }
-  </style>
-</head>
-<body>
-  <header>
-    <h2>Akanksha Dental Clinic</h2>
-    <nav>
-      <a href="#services">Services</a>
-      <a href="#contact">Contact</a>
-    </nav>
-  </header>
-
-  <main>
-    <div class="hero">
-      <h1>Your Smile Deserves the Best Care</h1>
-      <p>
-        Welcome to Akanksha Dental Clinic. Explore our dental care services
-        and contact our clinic to enquire about an appointment.
-      </p>
-      <a class="btn" href="#contact">Contact the Clinic</a>
-      <a class="btn secondary" href="#services">Explore Services</a>
+{% extends "base.html" %}
+{% block content %}
+<section class="hero">
+  <div class="hero-glow"></div><div class="container hero-grid">
+    <div class="hero-copy">
+      <div class="eyebrow"><span class="eyebrow-dot"></span> YOUR NEIGHBOURHOOD DENTAL STUDIO</div>
+      <h1>A healthier smile.<br><em>A happier you.</em></h1>
+      <p class="hero-lead">Modern dentistry, a gentle touch and a team that takes time to listen. Your smile deserves care that feels different.</p>
+      <div class="hero-actions"><a class="button" href="#book">Request an appointment <span>↗</span></a><a class="text-link" href="#services">Explore treatments <span>→</span></a></div>
+      <div class="hero-proof"><div class="avatar-stack"><span>☺</span><span>✦</span><span>♡</span></div><div><b>Care tailored to you</b><small>From routine check-ups to smile makeovers</small></div></div>
     </div>
-
-    <section id="services">
-      <h2>Our Dental Services</h2>
-      <p>Contact the clinic to enquire about available treatments.</p>
-      <div class="services">
-        <div class="service">
-          <h3>Dental Check-up</h3>
-          <p>Routine dental examinations and oral care guidance.</p>
-        </div>
-        <div class="service">
-          <h3>Teeth Cleaning</h3>
-          <p>Ask us about professional dental cleaning.</p>
-        </div>
-        <div class="service">
-          <h3>Smile Care</h3>
-          <p>Discuss your dental care needs with the clinic.</p>
-        </div>
-      </div>
-    </section>
-
-    <section id="contact">
-      <h2>Contact Akanksha Dental Clinic</h2>
-      <p>For clinic address, phone number and appointment enquiries, please contact us.</p>
-      <p>Replace this text with the clinic's verified address and phone number.</p>
-    </section>
-  </main>
-
-  <footer>
-    <p>© 2026 Akanksha Dental Clinic</p>
-  </footer>
-</body>
-</html>
+    <div class="hero-visual">
+      <div class="image-orbit orbit-one"></div><div class="image-orbit orbit-two"></div>
+      <div class="hero-photo"><img src="https://img.magnific.com/free-photo/smiling-young-man-sitting-dentist-chair-while-doctor-examining-his-teeth_158595-7733.jpg?semt=ais_hybrid&w=740&q=80"></div>
+      <div class="floating-card card-top"><span class="card-icon">✧</span><div><b>Gentle by design</b><small>Comfort comes first</small></div></div>
+      <div class="floating-card card-bottom"><span class="mini-check">✓</span><div><b>19+ treatment options</b><small>Care for every stage of life</small></div></div>
+      <div class="hero-stamp"><span>YOUR</span><b>SMILE</b><span>MATTERS ✳</span></div>
+    </div>
+  </div>
+  <div class="container hero-bottom"><div><span class="stat-number">01</span><span>Personalised<br>care plans</span></div><div><span class="stat-number">02</span><span>Clear, friendly<br>communication</span></div><div><span class="stat-number">03</span><span>Everyday care to<br>advanced treatments</span></div><a href="#hours" class="hours-pill"><span class="pulse"></span> View clinic hours <span>↗</span></a></div>
+</section>
+<section class="trust-strip"><div class="container trust-inner"><span>CARE FOR EVERY SMILE</span><i>✳</i><span>PREVENTIVE DENTISTRY</span><i>✳</i><span>COSMETIC CONSULTATIONS</span><i>✳</i><span>FAMILY-FRIENDLY CARE</span></div></section>
+<section class="section services-section" id="services"><div class="container">
+  <div class="section-heading"><div><div class="eyebrow">OUR TREATMENTS</div><h2>Everything your smile<br><em>needs to shine.</em></h2></div><p>Whether you're here for a routine check-up or exploring a new smile, we'll help you understand your options and choose your next step with confidence.</p></div>
+  <div class="service-grid">{% for service in services %}<article class="service-card"><div class="service-icon">{% if loop.index == 1 %}✧{% elif loop.index == 2 %}♡{% elif loop.index == 3 %}▦{% elif loop.index == 4 %}◉{% elif loop.index == 5 %}⌕{% elif loop.index == 6 %}✓{% elif loop.index == 7 %}◌{% elif loop.index == 8 %}✚{% elif loop.index == 9 %}⌁{% elif loop.index == 10 %}❋{% elif loop.index == 11 %}◇{% elif loop.index == 12 %}✦{% elif loop.index == 13 %}☺{% elif loop.index == 14 %}⬡{% elif loop.index == 15 %}✣{% elif loop.index == 16 %}⌘{% elif loop.index == 17 %}ϟ{% elif loop.index == 18 %}♕{% else %}♡{% endif %}</div><h3>{{ service[0] }}</h3><p>{{ service[1] }}</p><a href="#book" class="service-link" data-service="{{ service[0] }}">Ask about this <span>↗</span></a></article>{% endfor %}</div>
+</div></section>
+<section class="about-section section" id="about"><div class="container about-grid"><div class="about-visual"><img src="https://images.unsplash.com/photo-1609840114035-3c981b782dfe?auto=format&fit=crop&w=1000&q=85" alt="Modern dental care environment" loading="lazy"><div class="about-note"><span>✳</span><div><b>Good care starts with a conversation.</b><small>We explain the options, answer your questions and help you feel at ease.</small></div></div></div><div class="about-copy"><div class="eyebrow">A DIFFERENT KIND OF DENTAL VISIT</div><h2>Care that feels<br><em>good from hello.</em></h2><p>We believe dental care should feel clear, considerate and centred on you. From the first conversation to after-care guidance, our goal is to help you make informed choices about your oral health.</p><div class="check-list"><div><span>✓</span><div><b>Listen first</b><small>Your concerns and comfort matter.</small></div></div><div><span>✓</span><div><b>Explain every step</b><small>Understand your options before deciding.</small></div></div><div><span>✓</span><div><b>Care for the long term</b><small>Build healthy habits with practical advice.</small></div></div></div><a class="button button-dark" href="#book">Let's plan your visit <span>↗</span></a></div></div></section>
+<section class="gallery-section section" id="gallery"><div class="container"><div class="section-heading"><div><div class="eyebrow">A LOOK INSIDE</div><h2>Smiles, stories<br><em>and little moments.</em></h2></div><p>Photos from the clinic and our team will appear here. The clinic manager can add and remove photos after signing in.</p></div>
+<div class="gallery-grid">{% if gallery %}{% for photo in gallery %}<figure class="gallery-item"><img src="{{ url_for('static', filename='uploads/' ~ photo.filename) }}" alt="{{ photo.caption or 'Dental clinic photo' }}" loading="lazy"><figcaption>{{ photo.caption or 'At our clinic' }}</figcaption></figure>{% endfor %}{% else %}<figure class="gallery-item gallery-placeholder"><img src="https://images.unsplash.com/photo-1629909613654-28e377c37b09?auto=format&fit=crop&w=900&q=80" alt="Bright modern dental clinic" loading="lazy"><figcaption>Your clinic, thoughtfully designed</figcaption></figure><figure class="gallery-item gallery-placeholder"><img src="https://images.unsplash.com/photo-1606811971618-4486d14f3f99?auto=format&fit=crop&w=900&q=80" alt="Dental professional at work" loading="lazy"><figcaption>Professional care, personal attention</figcaption></figure><figure class="gallery-item gallery-placeholder"><img src="https://images.unsplash.com/photo-1609840114035-3c981b782dfe?auto=format&fit=crop&w=900&q=80" alt="Dental clinic treatment room" loading="lazy"><figcaption>A welcoming place to begin</figcaption></figure>{% endif %}</div>
+</div></section>
+<section class="booking-section section" id="book"><div class="container booking-grid"><div class="booking-copy"><div class="eyebrow">YOUR NEXT STEP</div><h2>Let's make time<br><em>for your smile.</em></h2><p>Send an appointment request and our team will contact you to confirm availability. Your request is not confirmed until the clinic responds.</p><div class="booking-contact"><a href="tel:{{ clinic.phone }}"><span>☎</span><div><small>CALL THE CLINIC</small><b>{{ clinic.phone }}</b></div></a><a href="{{ clinic.maps_url }}" target="_blank" rel="noopener"><span>↗</span><div><small>FIND YOUR WAY</small><b>Open Google Maps</b></div></a></div><div class="hours-mini"><span>◷</span><div><b>We're here for you</b><small>10 AM–2 PM &nbsp;·&nbsp; 5 PM–10 PM</small></div></div></div>
+<form class="booking-form" action="{{ url_for('appointment') }}" method="post"><div class="form-head"><span>✳ APPOINTMENT REQUEST</span><h3>Tell us a little about you.</h3><p>Fields marked * are required.</p></div><div class="form-row"><label>Your name *<input name="name" required maxlength="100" placeholder="e.g. Aditi Sharma" autocomplete="name"></label><label>Phone number *<input name="phone" required maxlength="20" placeholder="Your contact number" autocomplete="tel"></label></div><label>Email address<input name="email" type="email" maxlength="120" placeholder="you@example.com" autocomplete="email"></label><label>What can we help with? *<select name="service" required><option value="">Choose a treatment</option>{% for service in services %}<option>{{ service[0] }}</option>{% endfor %}</select></label><div class="form-row"><label>Preferred date<input name="preferred_date" type="date" min="{{ current_year }}-01-01"></label><label>Preferred time<select name="preferred_time"><option value="">Choose a time</option><option>10 AM – 2 PM</option><option>5 PM – 10 PM</option><option>Flexible</option></select></label></div><label>Anything you'd like us to know?<textarea name="message" rows="3" maxlength="1000" placeholder="Optional — please don't include sensitive medical details."></textarea></label><button class="button button-full" type="submit">Send appointment request <span>↗</span></button><small class="privacy-note">Please do not use this form for emergencies. Call the clinic or local emergency services if urgent.</small></form></div></section>
+<section class="hours-section section" id="hours"><div class="container hours-grid"><div><div class="eyebrow">PLAN YOUR VISIT</div><h2>Drop in to say<br><em>hello.</em></h2><p>Call ahead to confirm availability, especially for urgent concerns or specific treatments.</p><a class="button button-dark" href="{{ clinic.maps_url }}" target="_blank" rel="noopener">Get directions <span>↗</span></a></div><div class="hours-card"><div class="hours-card-title"><span>◷</span><div><h3>Opening hours</h3><p>Daily schedule may vary on holidays.</p></div></div><div class="hours-line"><span>Monday – Saturday</span><b>10 AM – 2 PM</b></div><div class="hours-line"><span>Evening session</span><b>5 PM – 10 PM</b></div><div class="hours-line"><span>Sunday / holidays</span><b>Call to confirm</b></div><div class="address-box"><span>⌖</span><div><small>CLINIC ADDRESS</small><p>{{ clinic.address }}</p><a href="{{ clinic.maps_url }}" target="_blank" rel="noopener">View map and directions ↗</a></div></div><div class="phone-box"><span>☎</span><div><small>CALL US</small><a href="tel:{{ clinic.phone }}">{{ clinic.phone }}</a></div></div></div></div></section>
+<div class="last-cta"><div class="container last-cta-inner"><div><span>YOUR SMILE IS WORTH IT</span><h2>Ready when you are.</h2></div><a class="button button-light" href="#book">Request a visit <span>↗</span></a></div></div>
+{% endblock %}
