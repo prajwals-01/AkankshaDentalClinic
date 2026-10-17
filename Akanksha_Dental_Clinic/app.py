@@ -20,7 +20,7 @@ app.config["UPLOAD_FOLDER"] = str(UPLOAD_DIR)
 
 # Replace these details with the client's approved clinic information.
 CLINIC = {
-    "name": os.environ.get("CLINIC_NAME", "SmileCraft Dental Clinic"),
+    "name": os.environ.get("CLINIC_NAME", "Akanksha Dental Clinic"),
     "phone": os.environ.get("CLINIC_PHONE", "8483835641"),
     "address": os.environ.get("CLINIC_ADDRESS", "Update with the clinic's verified street address"),
     "maps_url": os.environ.get("CLINIC_MAPS_URL", "https://maps.google.com/?q=dental+clinic"),
