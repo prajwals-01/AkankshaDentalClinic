@@ -1,0 +1,20 @@
+{
+  "name": "akanksha-dental-clinic",
+  "version": "1.0.0",
+  "description": "Dental Clinic Website for appointments and and management",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/prajwals-01/AkankshaDentalClinic.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/prajwals-01/AkankshaDentalClinic/issues"
+  },
+  "homepage": "https://github.com/prajwals-01/AkankshaDentalClinic#readme"
+}
