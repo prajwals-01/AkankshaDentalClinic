@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#0c2430">
+  <meta name="description" content="Friendly, modern dental care. Request an appointment with {{ clinic.name }}.">
+  <title>{% block title %}{{ clinic.name }} | Thoughtful Dental Care{% endblock %}</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+  <script defer src="{{ url_for('static', filename='js/main.js') }}"></script>
+</head>
+<body>
+<header class="site-header">
+  <div class="topline"><div class="container top-line-inner"><span>✦ Care that puts your smile first</span><span>Open today: 10 AM–2 PM &nbsp;·&nbsp; 5 PM–10 PM</span></div></div>
+  <nav class="nav container">
+    <a class="brand" href="{{ url_for('index') }}"><span class="brand-mark">✳</span><span><b>{{ clinic.name }}</b><small>CONFIDENCE STARTS WITH A SMILE</small></span></a>
+    <button class="menu-toggle" aria-label="Open navigation" aria-expanded="false">☰</button>
+    <div class="nav-links"><a href="{{ url_for('index') }}#services">Treatments</a><a href="{{ url_for('index') }}#about">Our approach</a><a href="{{ url_for('index') }}#gallery">Gallery</a><a href="{{ url_for('index') }}#hours">Hours & location</a></div>
+    <a class="button button-small" href="{{ url_for('index') }}#book">Book a visit <span>↗</span></a>
+  </nav>
+</header>
+{% with messages = get_flashed_messages(with_categories=true) %}
+  {% if messages %}<div class="flash-wrap container">{% for category, message in messages %}<div class="flash {{ category }}">{{ message }}<button aria-label="Dismiss" onclick="this.parentElement.remove()">×</button></div>{% endfor %}</div>{% endif %}
+{% endwith %}
+<main>{% block content %}{% endblock %}</main>
+<footer class="footer">
+  <div class="container footer-grid">
+    <div><a class="brand brand-light" href="{{ url_for('index') }}"><span class="brand-mark">✳</span><span><b>{{ clinic.name }}</b><small>CONFIDENCE STARTS WITH A SMILE</small></span></a><p>Thoughtful dental care, clear conversations and a more confident smile.</p></div>
+    <div><h4>Explore</h4><a href="{{ url_for('index') }}#services">Treatments</a><a href="{{ url_for('index') }}#about">Our approach</a><a href="{{ url_for('index') }}#book">Request an appointment</a></div>
+    <div><h4>Visit us</h4><p>{{ clinic.address }}</p><a href="{{ clinic.maps_url }}" target="_blank" rel="noopener">Open in Google Maps ↗</a><a href="tel:{{ clinic.phone }}">Call {{ clinic.phone }}</a></div>
+  </div>
+  <div class="container footer-bottom"><span>© {{ current_year }} {{ clinic.name }}. All rights reserved.</span><a href="{{ url_for('admin_login') }}">Clinic manager login</a></div>
+</footer>
+<a class="floating-call" href="tel:{{ clinic.phone }}" aria-label="Call the clinic">☎ <span>Call clinic</span></a>
+</body></html>
